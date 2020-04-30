@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
-    "name": "chrome-extension-template",
+    "name": "kissanimeAdsKiller",
     "version": "0.0.1",
-    "description": "Chrome extension boilerplate, replace all values!",
+    "description": "fun project",
     "browser_action": {
-        "default_title": "Boilerplate popup!",
+        "default_title": "meh",
         "default_popup": "src/views/popup.html"
     },
     "content_scripts": [
