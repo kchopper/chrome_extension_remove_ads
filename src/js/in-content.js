@@ -29,8 +29,16 @@ chrome.extension.onConnect.addListener(popupPort => {
 });
 
 // Response handler for short lived messages
-const handleBackgroundResponse = response =>
-    console.log('in-content.js - Received response:', response);
+const handleBackgroundResponse = response => {
+  if (window.location.host == 'kissanime.ru') {
+
+    console.log('Initializing mission Destroy naught stuff 999');
+    document.querySelectorAll("iframe").forEach(function(naughtyAd){
+      naughtyAd.remove();
+    })
+    console.log('Mission Successfull');
+  }
+}
 
 // Send a message to background.js
 chrome.runtime.sendMessage('Message from in-content.js!', handleBackgroundResponse);
